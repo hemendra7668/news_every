@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:news/listp.dart';
+import 'package:news/signuppage.dart';
 
 import 'Mainpage.dart';
+import 'articles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +13,14 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
+    var h = const Chats();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -26,9 +33,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Mainpage(
-        
-      ),
-      );
+      home: h,
+      //  Lists(),
+    );
   }
 }
